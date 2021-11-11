@@ -1,1 +1,1 @@
-# paho.mqtt_py_demo_team
+# paho.mqtt_py_demo
