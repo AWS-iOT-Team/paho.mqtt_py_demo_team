@@ -10,11 +10,8 @@ import cv2
 import torch
 import torch.backends.cudnn as cudnn
 import random
-import signal
 import numpy as np
 import math
-import getopt
-import psutil
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 
@@ -122,17 +119,17 @@ class deepsortClass(mqttClass):
         self.following_pers = 0 # 추적할 person타겟 초기화 
         self.boxCent_list = []
         
-        self.keyMap = {b'A' : 'turn right::▶▶▶▶',
-                        b'B' : 'turn right::▶▶▶',
-                        b'C' : 'turn right::▶▶',
-                        b'D' : 'turn right::▶',
-                        b'E' : '◀◀◀◀::turn left',
-                        b'F' : '◀◀◀::turn left',
-                        b'G' : '◀◀::turn left',
-                        b'H' : '◀::turn left',
+        self.keyMap = {b'A' : 'turn right:: ▶▶▶▶',
+                        b'B' : 'turn right:: ▶▶▶',
+                        b'C' : 'turn right:: ▶▶',
+                        b'D' : 'turn right:: ▶',
+                        b'E' : '◀ :: turn left',
+                        b'F' : '◀◀ :: turn left',
+                        b'G' : '◀◀◀ :: turn left',
+                        b'H' : '◀◀◀◀ :: turn left',
                         b'h' : '▲',
                         b'k' : '▼',
-                        b'j' : '■STOP■'}
+                        b'j' : '■ STOP ■'}
 
     # 물체의 좌우 끝 좌표를 받아 그 물체 의 거리값을 가져와주는 함수 
     def location_to_depth(self, grayimg, loc1, loc2, depth_data):
@@ -192,7 +189,7 @@ class deepsortClass(mqttClass):
                 else:
                     # 타겟과의 거리가 멀리있을때 전진
                     if self.distance_val > 80.0:
-                        buff_a = b'h'
+                        buff_a = b'i'
 
                     # 타겟과의 거리가 가까이있을때 후진
                     # elif distance_val < 0.5:
