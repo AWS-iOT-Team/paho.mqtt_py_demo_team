@@ -77,6 +77,7 @@ class mqttClass():
 
         opt = parser.parse_args()
 
+        # 실행 시 인자의 기본값 설정
         opt.img_size = check_img_size(opt.img_size)
         opt.source = '2'
         opt.yolo_weights = 'yolov5s.pt'
@@ -119,6 +120,7 @@ class deepsortClass(mqttClass):
         self.following_pers = 0 # 추적할 person타겟 초기화 
         self.boxCent_list = []
         
+        # 주행 커맨드
         self.keyMap = {b'A' : 'turn right:: ▶▶▶▶',
                         b'B' : 'turn right:: ▶▶▶',
                         b'C' : 'turn right:: ▶▶',

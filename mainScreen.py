@@ -79,6 +79,7 @@ def publish_Following_old(client):
     else:
         print(f"Failed to send message to topic {topic}")
 
+# 프로세스 종료 topic 메시지 전송
 def Following_Cancle(client):
     time.sleep(1)
 
@@ -91,6 +92,7 @@ def Following_Cancle(client):
     else:
         print(f"Failed to send message to topic {topic}")
 
+# 라이다 작동 및 slam 실행
 def publish_Nav(client):
     time.sleep(1)
     
@@ -116,6 +118,7 @@ def publish_Nav(client):
 #     else:
 #         print(f"Failed to send message to topic {topic}")
 
+# 맵 저장
 def publish_Map(client):
     os.system("rosrun map_server map_saver -f ~/map")
     # time.sleep(1)
@@ -280,6 +283,7 @@ class Nav_WindowClass(QMainWindow, Nav_form_class):
         self.m.show()
         self.hide()
 
+    # 지도 제작 버튼을 누르고 조이스틱으로 수동제어하고자 할 때
     def Cmd_window(self):
         self.c = cmd.Keyboard_WindowClass()
         self.c.show()

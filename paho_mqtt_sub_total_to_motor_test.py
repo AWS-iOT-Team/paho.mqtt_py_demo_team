@@ -86,6 +86,7 @@ class mqttClass(MotorCon):
             print(msg.topic + " " + str(msg.payload))
             stopCommand = [msg.topic, str(msg.payload)]
             try:
+                # 취소 버튼을 누를 시 mqtt stop topic을 보냄 -> j(stop)를 20번 반복 
                 if stopCommand[0] == self.topicStop and stopCommand[1] == b'j':
                     i = 0
                     while i < 20:

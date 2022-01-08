@@ -15,6 +15,8 @@ lidarStop = "python/lidarStop"
 flag = 0
 
 uuid = rlutil.get_or_generate_uuid(None, False)
+
+# ros 실행 커맨드
 lidarStartArgs = ["rplidar_ros", "rplidar.launch"]
 lidarMappingArgs = ["hector_slam_launch", "tutorial.launch"]
 roslaunchLidarStart = rlutil.resolve_launch_arguments(lidarStartArgs)[0]

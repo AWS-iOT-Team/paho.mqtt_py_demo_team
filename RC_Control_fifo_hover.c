@@ -193,7 +193,7 @@ int main( int argc, char **argv )
                break; 
 
             case 'j':
-            case 10:
+            //case 10:
                printf("j\n");               
                //Buff[0] = 'i';
                Buff[0] = 'j';
@@ -210,7 +210,7 @@ int main( int argc, char **argv )
                break; 
 
             case 'A':
-            case 97:
+            //case 97:
                 if (bluetooth_flag == 2)
                 {
                     printf("forward.\n");
@@ -231,7 +231,7 @@ int main( int argc, char **argv )
                 }
 
 	        case 'B':
-            case 98:
+            //case 98:
                 if (bluetooth_flag == 2)
                 {
                     printf("backward.\n");
@@ -252,7 +252,7 @@ int main( int argc, char **argv )
                 }
                 
             case 'C':
-            case 99:
+            //case 99:
                 if (bluetooth_flag == 2)
                 {
                     printf("turn right:: ▶\n");
@@ -274,7 +274,7 @@ int main( int argc, char **argv )
                 }
                 
             case 'D':
-            case 100:
+            //case 100:
                 if (bluetooth_flag == 2)
                 {
                     printf("◀ ::turn left\n");
@@ -295,7 +295,7 @@ int main( int argc, char **argv )
                 }
                 
             case 'E':
-            case 101:
+            //case 101:
                printf("E\n");
                Buff[0] = 'E';
                write( handle, Buff, 1 );
@@ -303,7 +303,7 @@ int main( int argc, char **argv )
                break;
 
 	        case 'F':
-            case 102:
+            //case 102:
                printf("F\n");
                Buff[0] = 'F';
                write( handle, Buff, 1 );
@@ -311,7 +311,7 @@ int main( int argc, char **argv )
                break;
 
             case 'G':
-            case 103:
+            //case 103:
                printf("G\n");               
                //Buff[0] = 'I';
                Buff[0] = 'G';
@@ -320,7 +320,7 @@ int main( int argc, char **argv )
                break;  
 
             case 'H':
-            case 104:
+            //case 104:
                printf("H\n");
                //Buff[0] = 'D';
                Buff[0] = 'H';
