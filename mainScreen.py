@@ -54,6 +54,7 @@ def connect_mqtt():
     #client.connect(broker2, port)
     return client
 
+# 추종 버튼 클릭 시 동작
 def publish_Following(client):
     time.sleep(1)
     
